@@ -1,7 +1,16 @@
 <template>
-  <q-input rounded outlined v-model="text" label="Buscar" style="width: 400px">
-    <template v-slot:append><q-icon name="search" /></template>
-  </q-input>
+  <div class="q-pa-md q-gutter-sm">
+    <q-input
+      rounded
+      outlined
+      v-model="text"
+      label="Buscar"
+      style="width: 400px"
+    >
+      <template v-slot:append><q-icon name="search" /></template>
+    </q-input>
+  </div>
+
   <div class="q-pa-md row items-start q-gutter-md">
     <q-card class="my-card"
       ><q-img style="height: 200px" :src="this.producto1.img"
