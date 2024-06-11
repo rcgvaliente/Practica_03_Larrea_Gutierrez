@@ -67,7 +67,7 @@
   
   
          if (this.email == "Admin" && this.password == "1234") {
-            
+            this.$router.push('/Producto')
          }
          else{
             this.$q.notify({
