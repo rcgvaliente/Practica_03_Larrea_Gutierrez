@@ -13,6 +13,7 @@
               type="email"
               label="email"
             />
+            <br>
             <q-input
               square
               filled
@@ -30,11 +31,11 @@
             class="full-width"
             label="Login"
             @click="IniciarSesion()"
-          />
+          /> <br><br>
           <q-btn
             color="primary"
             size="lg"
-            class="full-width"
+            class="q-mt-md full-width"
             label="Crear usuario"
           />
         </q-card-actions>
@@ -65,17 +66,15 @@
           };
   
   
-          axios
-            .request(config)
-            .then((response) => {
-              location.href = "/Usuario/Inicio";
-            })
-            .catch((error) => {
-              this.$q.notify({
-                type: "negative",
-                message: error.response.data.message,
-              });
+         if (this.email == "Admin" && this.password == "1234") {
+            
+         }
+         else{
+            this.$q.notify({
+              type: "negative",
+              message: "Email y/o contraseña incorrecta",
             });
+         }
         } catch (error) {
           console.error("Error al obtener datos:", error);
         }
